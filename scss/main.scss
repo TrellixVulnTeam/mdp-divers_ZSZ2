@@ -15,15 +15,20 @@
         grid-area: header;
         height: 20vh;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
 
-        img {
-            height: 80%;
+        a {
+            height: 130px;
+            width: 130px;
+            img {
+                height: 100%;
+                width: 100%;
 
-            &:hover {
-                transform: scale(1.1);
-                transition: 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.2s;
+                }
             }
         }
     }
@@ -443,7 +448,7 @@
 
     .main-viajes {
 
-        .bombinhas{
+        .bombinhas {
             background-image: url("../img/fondo-bombinhas.jpg");
             background-size: 100% 100%;
             height: 500px;
@@ -481,7 +486,7 @@
             }
         }
 
-        .cuba{
+        .cuba {
             background-image: url("../img/fondo-cuba.jpg");
             background-size: 100% 100%;
             height: 500px;

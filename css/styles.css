@@ -11,13 +11,17 @@
     grid-area: header;
     height: 20vh;
     display: flex;
-    align-items: center;
-    justify-content: center; }
-    .container .header-index img {
-      height: 80%; }
-      .container .header-index img:hover {
-        transform: scale(1.1);
-        transition: 0.2s; }
+    justify-content: center;
+    align-items: center; }
+    .container .header-index a {
+      height: 130px;
+      width: 130px; }
+      .container .header-index a img {
+        height: 100%;
+        width: 100%; }
+        .container .header-index a img:hover {
+          transform: scale(1.1);
+          transition: 0.2s; }
   .container .main-index {
     grid-area: main;
     height: auto;
