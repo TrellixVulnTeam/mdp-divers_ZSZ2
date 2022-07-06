@@ -6,28 +6,28 @@
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr;
-  grid-template-rows: 8fr 1fr;
-  grid-template-areas: "header main" "footer main"; }
+  grid-template-areas: "header" "main" "footer"; }
   .container .header-index {
     grid-area: header;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center; }
     .container .header-index img {
-      height: 0.5fr;
-      width: 60%; }
+      height: 80%; }
       .container .header-index img:hover {
         transform: scale(1.1);
         transition: 0.2s; }
   .container .main-index {
     grid-area: main;
+    height: auto;
     display: grid;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: "viajes escuela escuela" "viajes nosotros contacto"; }
+    grid-template-areas: "viajes" "escuela" "nosotros" "contacto"; }
     .container .main-index .viajes {
       grid-area: viajes;
+      height: 400px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow: hidden;
@@ -45,10 +45,28 @@
         color: wheat;
         text-shadow: 1px 2px 3px black;
         font-size: 4rem; }
+      .container .main-index .viajes hr {
+        border: 0;
+        height: 12px;
+        box-shadow: inset 0 12px 12px -12px #38a73d; }
+      .container .main-index .viajes p {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+        color: #000000;
+        font-weight: 400;
+        text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.667);
+        background-color: rgba(0, 0, 0, 0.034);
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px; }
     .container .main-index .escuela {
       grid-area: escuela;
+      height: 400px;
       background-color: aqua;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-image: url("../img/fondo-buceo.avif");
@@ -65,10 +83,28 @@
         color: wheat;
         text-shadow: 1px 2px 3px black;
         font-size: 4rem; }
+      .container .main-index .escuela hr {
+        border: 0;
+        height: 12px;
+        box-shadow: inset 0 12px 12px -12px #389ca7; }
+      .container .main-index .escuela p {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+        color: #ffffff;
+        font-weight: 400;
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+        background-color: rgba(0, 0, 0, 0.034);
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px; }
     .container .main-index .nosotros {
       grid-area: nosotros;
+      height: 400px;
       background-color: yellow;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-image: url("../img/fondo-nosotros.jpg");
@@ -85,10 +121,28 @@
         color: wheat;
         text-shadow: 1px 2px 3px black;
         font-size: 2rem; }
+      .container .main-index .nosotros hr {
+        border: 0;
+        height: 12px;
+        box-shadow: inset 0 12px 12px -12px #389ca7; }
+      .container .main-index .nosotros p {
+        margin-top: 4px;
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+        color: #ffffff;
+        font-weight: 400;
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+        background-color: rgba(0, 0, 0, 0.034);
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px; }
     .container .main-index .contacto {
       grid-area: contacto;
+      height: 400px;
       background-color: #248d24;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-image: url("../img/fondo-contacto.webp");
@@ -105,13 +159,29 @@
         color: wheat;
         text-shadow: 1px 2px 3px black;
         font-size: 2rem; }
+      .container .main-index .contacto hr {
+        border: 0;
+        height: 12px;
+        box-shadow: inset 0 12px 12px -12px #38a73d; }
+      .container .main-index .contacto p {
+        margin-top: 4px;
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+        color: #000000;
+        font-weight: 45 0;
+        text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.667);
+        background-color: rgba(0, 0, 0, 0.034);
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px; }
   .container .footer-index {
     grid-area: footer;
+    background-color: #FDFBF8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(19, 140, 174, 0.549); }
+    justify-content: center; }
     .container .footer-index .info-footer {
       text-align: center;
       margin: 5px; }
@@ -132,3 +202,32 @@
         .container .footer-index div .redes-sociales li:hover {
           transform: scale(1.2);
           transition: 0.3s; }
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 0.5fr 2.5fr;
+    grid-template-rows: 8fr 1fr;
+    grid-template-areas: "header main" "footer main"; }
+    .container .header-index {
+      height: auto; }
+      .container .header-index img {
+        height: auto;
+        width: 60%; }
+    .container .main-index {
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "viajes escuela escuela" "viajes nosotros contacto"; }
+      .container .main-index .viajes {
+        height: auto; }
+      .container .main-index .escuela {
+        height: auto; }
+      .container .main-index .nosotros {
+        height: auto; }
+      .container .main-index .contacto {
+        height: auto; }
+    .container .footer-index {
+      grid-area: footer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid rgba(19, 140, 174, 0.549); } }

@@ -7,22 +7,21 @@
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 0.5fr 2.5fr;
-    grid-template-rows: 8fr 1fr;
-    grid-template-areas: "header main"
-        "footer main";
+    grid-template-areas: "header"
+        "main"
+        "footer";
 
     .header-index {
         grid-area: header;
+        height: 20vh;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img{
-            height: 0.5fr;
-            width: 60%;
+        img {
+            height: 80%;
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
                 transition: 0.2s;
             }
@@ -31,15 +30,19 @@
 
     .main-index {
         grid-area: main;
+        height: auto;
         display: grid;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: "viajes escuela escuela"
-            "viajes nosotros contacto";
+        grid-template-areas: "viajes"
+            "escuela"
+            "nosotros"
+            "contacto";
 
 
         .viajes {
             grid-area: viajes;
+            height: 400px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow: hidden;
@@ -47,14 +50,14 @@
             background-image: url("../img/fondo-viajes.webp");
             background-size: 100% 100%;
 
-            &:hover{
+            &:hover {
                 background-size: 105% 105%;
                 transition: 0.5s;
                 cursor: pointer;
             }
 
-            h2{
-                a{
+            h2 {
+                a {
                     text-decoration: none;
                     font-family: 'Denk One', sans-serif;
                     text-transform: uppercase;
@@ -64,26 +67,52 @@
                     font-size: 4rem;
                 }
             }
+
+            hr {
+                border: 0;
+                height: 12px;
+                box-shadow: inset 0 12px 12px -12px #38a73d;
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 1.5rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: italic;
+                color: #000000;
+                font-weight: 400;
+                text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.667);
+                background-color: rgba(0, 0, 0, 0.034);
+                border-radius: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+
+            }
         }
 
         .escuela {
             grid-area: escuela;
+
+
+            height: 400px;
             background-color: aqua;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
 
             background-image: url("../img/fondo-buceo.avif");
             background-size: 100% 100%;
 
-            &:hover{
+            &:hover {
                 background-size: 105% 105%;
                 transition: 0.5s;
                 cursor: pointer;
             }
 
-            h2{
-                a{
+            h2 {
+                a {
                     text-decoration: none;
                     font-family: 'Denk One', sans-serif;
                     text-transform: uppercase;
@@ -93,26 +122,52 @@
                     font-size: 4rem;
                 }
             }
+
+            hr {
+                border: 0;
+                height: 12px;
+                box-shadow: inset 0 12px 12px -12px #389ca7;
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 1.5rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: italic;
+                color: #ffffff;
+                font-weight: 400;
+                text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+                background-color: rgba(0, 0, 0, 0.034);
+                border-radius: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+
+            }
         }
 
         .nosotros {
             grid-area: nosotros;
+
+
+            height: 400px;
             background-color: yellow;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
 
             background-image: url("../img/fondo-nosotros.jpg");
             background-size: 100% 100%;
 
-            &:hover{
+            &:hover {
                 background-size: 105% 105%;
                 transition: 0.5s;
                 cursor: pointer;
             }
 
-            h2{
-                a{
+            h2 {
+                a {
                     text-decoration: none;
                     font-family: 'Denk One', sans-serif;
                     text-transform: uppercase;
@@ -122,26 +177,50 @@
                     font-size: 2rem;
                 }
             }
+
+            hr {
+                border: 0;
+                height: 12px;
+                box-shadow: inset 0 12px 12px -12px #389ca7;
+            }
+
+            p {
+                margin-top: 4px;
+                font-size: 1rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: italic;
+                color: #ffffff;
+                font-weight: 400;
+                text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+                background-color: rgba(0, 0, 0, 0.034);
+                border-radius: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+
+            }
         }
 
         .contacto {
             grid-area: contacto;
+            height: 400px;
             background-color: rgb(36, 141, 36);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
 
             background-image: url("../img/fondo-contacto.webp");
             background-size: 100% 100%;
 
-            &:hover{
+            &:hover {
                 background-size: 105% 105%;
                 transition: 0.5s;
                 cursor: pointer;
             }
 
-            h2{
-                a{
+            h2 {
+                a {
                     text-decoration: none;
                     font-family: 'Denk One', sans-serif;
                     text-transform: uppercase;
@@ -151,16 +230,39 @@
                     font-size: 2rem;
                 }
             }
+
+            hr {
+                border: 0;
+                height: 12px;
+                box-shadow: inset 0 12px 12px -12px #38a73d;
+            }
+
+            p {
+                margin-top: 4px;
+                font-size: 1rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: italic;
+                color: #000000;
+                font-weight: 45 0;
+                text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.667);
+                background-color: rgba(0, 0, 0, 0.034);
+                border-radius: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+
+            }
         }
     }
 
     .footer-index {
         grid-area: footer;
+        background-color: #FDFBF8;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-top: 1px solid rgba(19, 140, 174, 0.549);
 
         .info-footer {
             text-align: center;
@@ -168,7 +270,7 @@
 
             .nombre-footer {
 
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 font-size: 15px;
                 margin: 2px;
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.404);
@@ -201,4 +303,60 @@
     }
 
 
+}
+
+////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////
+
+@media screen and (min-width:768px) {
+    .container {
+        grid-template-columns: 0.5fr 2.5fr;
+        grid-template-rows: 8fr 1fr;
+        grid-template-areas: "header main"
+            "footer main";
+
+        .header-index {
+
+            height: auto;
+
+            img {
+                height: auto;
+                width: 60%;
+            }
+        }
+
+        .main-index {
+            grid-template-rows: 2fr 1fr;
+            grid-template-areas: "viajes escuela escuela"
+                "viajes nosotros contacto";
+
+            .viajes {
+                height: auto;
+            }
+
+            .escuela {
+                height: auto;
+            }
+
+            .nosotros {
+                height: auto;
+            }
+
+            .contacto {
+                height: auto;
+            }
+        }
+
+        .footer-index {
+            grid-area: footer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid rgba(19, 140, 174, 0.549);
+
+        }
+
+
+    }
 }
