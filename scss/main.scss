@@ -253,12 +253,13 @@
 
             }
         }
+
     }
 
     .footer-index {
         grid-area: footer;
         background-color: #FDFBF8;
-        
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -303,6 +304,221 @@
     }
 
 
+}
+
+.pages-container {
+    background-color: #F8F9FA;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: "header"
+        "section"
+        "main "
+        "footer ";
+
+
+    .pages-header {
+        margin-bottom: 15px;
+        padding: 0px;
+        top: 0;
+        z-index: 1;
+        grid-area: header;
+        display: flex;
+        height: auto;
+        align-self: center;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            --bs-navbar-padding-y: 0px;
+            --bs-navbar-toggler-border-color: rgba(52, 41, 255, 0.87);
+            --bs-navbar-color: rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-top: 5px;
+
+            &:hover {
+                transform: scale(0.9);
+                transition: 0.3s;
+            }
+        }
+
+        nav {
+
+            div {
+                div {
+                    .navbar-nav {
+                        width: 100%;
+                    }
+
+                    ul {
+                        display: flex;
+
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        li {
+                            //border: 1px solid black;
+                            padding: 30px;
+
+                            padding-bottom: 5px;
+
+                            .botonAnimation {
+
+                                list-style-type: none;
+                                text-transform: uppercase;
+                                font-family: 'Denk One', sans-serif;
+                                font-weight: 200;
+                                font-size: 25px;
+                                box-shadow: 0 12px 12px -12px #000000;
+
+                                text-shadow: 1px 1px 1px rgb(96, 96, 96);
+                                background-color: transparent;
+                                border-radius: 5px;
+                                /* En la siguiente linea borre el 4to parametro de box shadow*/
+                                color: rgb(0, 0, 0);
+                                //margin: 3px;
+                                text-decoration: none;
+
+                                &:hover {
+                                    color: #ffffff !important;
+                                    text-shadow: 0.5px 0.5px 1px black;
+                                    border: 3px groove red;
+                                    font-weight: 400;
+                                    font-size: 27px;
+                                    padding: 0.5em 1.2em;
+                                    background: rgba(19, 16, 207, 0.977);
+                                    transition: all 0.5s ease;
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pages-section {
+        grid-area: section;
+        background-color: rgba(0, 0, 0, 0.589);
+        width: 100%;
+        height: 8vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            font-family: 'Denk One', sans-serif;
+            text-transform: uppercase;
+            font-weight: 100;
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 2px 3px black;
+            font-size: 2rem;
+        }
+
+        p {
+            border-left: 2px solid rgb(255, 255, 255);
+            margin-top: 10px;
+            margin-left: 30px;
+            padding-left: 30px;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            color: #ffffff;
+            font-weight: 450;
+            text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+        }
+    }
+
+    .main-viajes {
+
+        .bombinhas{
+            background-image: url("../img/fondo-bombinhas.jpg");
+            background-size: 100% 100%;
+            height: 500px;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                text-align: center;
+                font-family: 'Denk One', sans-serif;
+                text-transform: uppercase;
+                font-weight: 100;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 2px 3px black;
+                font-size: 6rem;
+            }
+
+            div {
+                width: 100%;
+                padding: 30px;
+                background-color: rgba(0, 0, 0, 0.74);
+
+                p {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-style: italic;
+                    color: #ffffff;
+                    font-weight: 450;
+                    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+                }
+            }
+        }
+
+        .cuba{
+            background-image: url("../img/fondo-cuba.jpg");
+            background-size: 100% 100%;
+            height: 500px;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                text-align: center;
+                font-family: 'Denk One', sans-serif;
+                text-transform: uppercase;
+                font-weight: 100;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 2px 3px black;
+                font-size: 6rem;
+            }
+
+            div {
+                width: 100%;
+                padding: 30px;
+                background-color: rgba(0, 0, 0, 0.74);
+
+                p {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-style: italic;
+                    color: #ffffff;
+                    font-weight: 450;
+                    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.667);
+                }
+            }
+        }
+    }
 }
 
 ////////////////////////////////////////////////////
